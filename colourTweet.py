@@ -1,3 +1,15 @@
+##################################################
+#
+#   Program based on the excellent example by
+#   http://computers.tutsplus.com/tutorials/how-to-build-a-tweet-controlled-rgb-lcd--cms-20515
+#   By  by Jeremy Blythe
+#
+#   Modified by Mark Routledge to work with Hacked Dioder LEDs using Co-Op-Pi
+#
+#   Created 1st June 2014
+#
+##################################################
+
 import sys
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
@@ -25,12 +37,11 @@ firmata.set_pin_mode( REDPIN, firmata.PWM, firmata.DIGITAL)
 firmata.set_pin_mode( GREENPIN, firmata.PWM, firmata.DIGITAL)
 firmata.set_pin_mode( BLUEPIN, firmata.PWM, firmata.DIGITAL) 
  
-api_key='UHwGTldmoxrkECTaA4zGjeihZ'
-api_secret='NYgslge6GvtvmBcLJUySm15WYahOpbFSu4AAuHWhd0VoIdrUOh'
+api_key=''
+api_secret=''
  
-access_token_key='2161868077-1aiRuSnYwTI24DoQ8Lkbx5pXsjj2d2vIVm4ArcA'
-access_token_secret='ggwy8AA76JLlYo6uNbcdFbqdK7sFDw3zLsJIDXodABkc2'
- 
+access_token_key=''
+access_token_secret=''
  
 class DisplayLoop(StreamListener):
     """
